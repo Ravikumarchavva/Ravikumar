@@ -1,0 +1,7 @@
+run = "pip install -r requiremens.txt"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "pip install -r requiremens.txt"]
