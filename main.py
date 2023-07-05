@@ -102,13 +102,11 @@ def contact_form():
                   recipients=[par['gmail-user']],
                   body=msg)
       try:
-         print("hi")
          mail.send(send_mess)
-         print("hi")
-         return "sent message"
+         return render_template("contact.html",params=par,msg_status="message sent")
       except Exception as e:
          print(e)
-         return  "message error"
+         return  render_template("contact.html",params=par,msg_status="message not sent")
    return render_template("contact.html",params=par)
 
 
