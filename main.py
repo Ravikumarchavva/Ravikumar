@@ -97,7 +97,7 @@ def contact_form():
          con.close()
       except Exception as e:
          print(e)
-      send_mess = Message("you got a mail from "+ username,
+      send_mess = Message("you got a mail from "+ email,
                   sender=email,
                   recipients=[par['gmail-user']],
                   body=msg)
